@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface RendezVousRepository extends JpaRepository<RendezVous, Long> {
     // Pour le vétérinaire : voir ses RDV du jour
-    List<RendezVous> findByVeterinaryIdAndDateRendezVousBetween(
+    List<RendezVous> findByVeterinaryIdAndStartDateBetween(
             Long veterinaryId, LocalDateTime startDate, LocalDateTime endDate);
 
     // Pour le propriétaire : voir ses rendez-vous à venir
